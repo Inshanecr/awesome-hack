@@ -9,7 +9,7 @@ try:
   from colorama import Fore,init
   from requests import get
   import re
-  from time import sleep 
+  from time import sleep
 except ImportError:
     system("pip install random")
     system("pip install faker")
@@ -79,8 +79,7 @@ def short():
       if cou == "IR":
           exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
       else:
-        try:  
-            system("clear")
+        try:
             print(f"""
             {ye}[1]{y} Chilp.it {ye}[2]{y} clck.ru
             {ye}[3]{y} Da.hd   {ye} [4]{y} Is.gd
@@ -108,7 +107,7 @@ def short():
  
 def getInfo():
   try:
-    country = input(Fore.YELLOW+"\nsend Your country name : ")
+    country = input(Fore.YELLOW+"send Your country name : ")
     faker = Faker(country)
     number = int(input(Fore.LIGHTBLUE_EX+"How much you need : "))
     file = open("file-fake.txt","w")
