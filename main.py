@@ -26,7 +26,7 @@ while True:
           Fakeban()
           getInfo()
    elif user == "0":
-          exit("Goodbye")
+          exit("\nGoodbye")
  except KeyboardInterrupt:
     exit(Fore.CYAN+"\nGoodbye")
  
