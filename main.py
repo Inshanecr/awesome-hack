@@ -1,7 +1,8 @@
 # ----- T.me/LooQaat || T.me/Pythonte ----
+from os import system
+system("apt install neofetch")
 try:
-  from colorama import Fore,init
-  from os import system 
+  from colorama import Fore,init 
   from time import sleep 
   from command import *
   from banner import *
