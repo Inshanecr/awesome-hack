@@ -20,6 +20,7 @@ while True:
           Urlban()
           short()
    elif user == "2":
+          CameraBan()
           camScan()
    elif user == "3":
           Fakeban()
