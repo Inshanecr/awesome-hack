@@ -18,10 +18,12 @@ while True:
    user =input(Fore.CYAN+"which Tool You need : ")
    system("clear")
    if user == "1":
+          Urlban()
           short()
    elif user == "2":
           camScan()
    elif user == "3":
+          Fakeban()
           getInfo()
    elif user == "0":
           exit("Goodbye")
