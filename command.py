@@ -1,14 +1,22 @@
+from os import system 
+system("apt install neofetch")
+system("clear")
 try:
   import pyshorteners
   import random 
   from ipapi import location
   from colorama import Fore,init
   from requests import get
-  from os import system 
   import re
   from time import sleep 
-except Exception as e:
-  print(e)
+except ImportError:
+    system("pip install random")
+    system("pip install re")
+    system("pip install requests")
+    system("pip install time")
+    system("pip install colorama")
+    system("pip install ipapi")
+    system("pip install pyshorteners")
 
 
 
@@ -16,7 +24,6 @@ except Exception as e:
 #CAMERA SCANNER    
 def camScan():
  try:
-    init()
     print()
     colors =['\033[31m','\033[32m','\033[33m','\033[34m','\033[35m','\033[36m','\033[37m','\033[93m']
     Q = random.choice(colors)
@@ -70,24 +77,30 @@ def short():
       if cou == "IR":
           exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
       else:
-          system("clear")
-          print(f"""
-          {ye}[1]{y} Chilp.it {ye}[2]{y} clck.ru
-          {ye}[3]{y} Da.hd   {ye} [4]{y} Is.gd
-          {ye}[5]{y} Os.db    {ye}[6]{y} Tinyurl.com {re}
-                  """)
-          link = pyshorteners.Shortener()
-          opt =int(input("which One You need :"))
-          url = input("send Your URL  : ")
-          if opt ==1 :
-              print("shortUrl :"+link.chilpit.short(url)) 
-          elif opt == 2:
-             print("shortUrl :"+link.clckru.short(url))
-          elif opt == 3:
-             print("shortUrl :"+link.dagd.short(url))
-          elif opt == 4:
-             print("shortUrl :"+link.isgd.short(url))#validator
-          elif opt == 5:
-             print("shortUrl :"+link.osdb.short(url))
-          elif opt == 6:
-             print("shortUrl :"+link.tinyurl.short(url))
+        try:  
+            system("clear")
+            print(f"""
+            {ye}[1]{y} Chilp.it {ye}[2]{y} clck.ru
+            {ye}[3]{y} Da.hd   {ye} [4]{y} Is.gd
+            {ye}[5]{y} Os.db    {ye}[6]{y} Tinyurl.com {re}
+                    """)
+            link = pyshorteners.Shortener()
+            opt =int(input('\033[34m'+"which One You need :"))
+            url = input('\033[35m'+"send Your URL  : ")
+            cy ='\033[36m'
+            if opt ==1 :
+                print(cy+"\nshortUrl :"+link.chilpit.short(url)) 
+            elif opt == 2:
+               print(cy+"\nshortUrl :"+link.clckru.short(url))
+            elif opt == 3:
+               print(cy+"\nshortUrl :"+link.dagd.short(url))
+            elif opt == 4:
+               print(cy+"\nshortUrl :"+link.isgd.short(url))#validator
+            elif opt == 5:
+               print(cy+"\nshortUrl :"+link.osdb.short(url))
+            elif opt == 6:
+               print(cy+"\nshortUrl :"+link.tinyurl.short(url))
+        
+        except KeyboardInterrupt:
+          exit(Fore.CYAN+"\nGoodbye")
+   
