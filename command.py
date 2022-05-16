@@ -11,16 +11,7 @@ try:
   import re
   from time import sleep
 except ImportError:
-    system("pip install faker")
-    system("pip install requests")
-    system("pip install colorama")
-    system("pip install ipapi")
-    system("pip install pyshorteners")
-    exit("\nRun script again")
-
-
-
-
+    exit("please install Libary\ncommand => python -m pip install requirements.txt")
 #CAMERA SCANNER    
 def camScan():
  try:
