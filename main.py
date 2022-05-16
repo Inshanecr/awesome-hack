@@ -6,8 +6,7 @@ try:
   from command import *
   from banner import *
 except ImportError:
-    system("pip install colorama ")
-
+    exit("please install Libary\ncommand => python -m pip install requirements.txt")
 
 system("clear")
 system("neofetch")
