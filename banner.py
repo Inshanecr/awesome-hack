@@ -5,6 +5,8 @@ ye = Fore.YELLOW
 re = Fore.RESET
 r = Fore.RED
 lb = Fore.LIGHTBLUE_EX 
+LB = Fore.LIGHTGREEN_EX 
+LG = '\033[33m' 
 #MAIN BANNER
 def banner():#banner
   ban =(f"""{lb}
@@ -67,3 +69,19 @@ def Fakeban():
    for Line in ban.split("\n"):
         sleep(0.1)
         print(Line)
+
+#CAMERA IP FINDER
+def CameraBan():
+  ban =f"""{LB}
+               || T.me/LooQaat || {LG}
+ #####                #####                
+#     #   ##   #    # #     #  ####    ##   #    # 
+#        #  #  ##  ## #       #    #  #  #  ##   # 
+#       #    # # ## #  #####  #      #    # # #  # 
+#       ###### #    #       # #      ###### #  # # 
+#     # #    # #    # #     # #    # #    # #   ## 
+ #####  #    # #    #  #####   ####  #    # #    # 
+  """
+  for Line in ban.split("\n"):
+    sleep(0.1)
+    print(Line)
