@@ -30,6 +30,5 @@ while True:
  
 
 
-
-   
+  
 #pyshorteners.exceptions.ShorteningErrorException:
