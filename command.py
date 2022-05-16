@@ -1,6 +1,7 @@
 from os import system 
 system("apt install neofetch")
 system("clear")
+
 try:
   from faker import Faker
   import pyshorteners
@@ -10,6 +11,7 @@ try:
   from requests import get
   import re
   from time import sleep
+
 except ImportError:
     exit("please install Libary\ncommand => python -m pip install -r requirements.txt")
 #CAMERA SCANNER    
@@ -58,17 +60,10 @@ def camScan():
 
 #URL SHORTETR
 def short():
-      y = Fore.GREEN
-      ye = Fore.YELLOW
-      re = Fore.RESET
-      ip = get("https://api.ipify.org").text
-      print('\n' + Fore.MAGENTA + ip + Fore.RESET)
-      http = get("https://api.ipify.org").text
-      cou = location(http)["country"]
-      if cou == "IR":
-          exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
-      else:
         try:
+            y = Fore.GREEN
+            ye = Fore.YELLOW
+            re = Fore.RESET
             print(f"""
             {ye}[1]{y} Chilp.it {ye}[2]{y} clck.ru
             {ye}[3]{y} Da.hd   {ye} [4]{y} Is.gd
@@ -91,6 +86,8 @@ def short():
             elif opt == 6:
                print(cy+"\nshortUrl :"+link.tinyurl.short(url))
         
+        except Exception as e:
+            exit(Fore.RED+"\n[-] please turn on VPN\n")
         except KeyboardInterrupt:
           exit(Fore.CYAN+"\nGoodbye")
  
@@ -124,3 +121,13 @@ def getInfo():
   except KeyboardInterrupt:
     exit(Fore.CYAN+"\nGoodbye")
 
+
+
+
+#def check_ip()
+  #    ip = get("https://api.ipify.org").text
+    # print('\n' + Fore.MAGENTA + ip + Fore.RESET)
+    #  http = get("https://api.ipify.org").text
+   #   cou = location(http)["country"]
+     # if cou == "IR":
+         # exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
