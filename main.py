@@ -6,7 +6,7 @@ try:
   from command import *
   from banner import *
 except ImportError:
-    exit("please install Libary\ncommand => python -m pip install requirements.txt")
+    exit("please Install Libaries\ncommand => python -m pip install -r requirements.txt")
 
 system("clear")
 system("neofetch")
