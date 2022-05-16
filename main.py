@@ -21,8 +21,10 @@ while True:
           short()
    elif user == "2":
           camScan()
+   elif user == "3":
+          getInfo()
    elif user == "0":
-        exit("Goodbye")
+          exit("Goodbye")
  except KeyboardInterrupt:
     exit(Fore.CYAN+"\nGoodbye")
  
