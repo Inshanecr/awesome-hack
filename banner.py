@@ -5,6 +5,7 @@ ye = Fore.YELLOW
 re = Fore.RESET
 r = Fore.RED
 lb = Fore.LIGHTBLUE_EX 
+#MAIN BANNER
 def banner():#banner
   ban =(f"""{lb}
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
@@ -22,6 +23,7 @@ def banner():#banner
   for Line in ban.split("\n"):
     sleep(0.1)
     print(Line)        
+#SHORT URL BANNER
 def Urlban():
     ye = '\033[90m'
     ban = (f"""{ye}
@@ -53,7 +55,7 @@ def Urlban():
     for Line in ban.split("\n"):
         sleep(0.1)
         print(Line)
-
+#FACKE INFROMATION BANNER
 def Fakeban():
    light ='\033[94m' 
    ban = (f"""{light}
