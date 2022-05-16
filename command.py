@@ -11,10 +11,8 @@ try:
   import re
   from time import sleep
 except ImportError:
-    system("pip install random")
     system("pip install faker")
     system("pip install requests")
-    system("pip install time")
     system("pip install colorama")
     system("pip install ipapi")
     system("pip install pyshorteners")
