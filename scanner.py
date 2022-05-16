@@ -1,14 +1,13 @@
+#------ T.me\LooQaat|T.me/Pythonte ------
+
 try:
-  import pyshorteners
-  from ipapi import location
   from colorama import Fore,init
-  from requests import get
   from os import system 
-  import re
   from time import sleep 
   from command import *
-except Exception as e:
-  print(e)
+except ImportError:
+    system("pip install colorama ")
+
 
 system("clear")
 system("neofetch")
@@ -31,8 +30,9 @@ def banner():#banner
     print(Line)
           
 while True:
+ try: 
    banner()
-   user =input("which Tool You need : ")
+   user =input(Fore.CYAN+"which Tool You need : ")
    system("clear")
    if user == "1":
           short()
@@ -40,8 +40,10 @@ while True:
           camScan()
    elif user == "0":
         exit("Goodbye")
+ except KeyboardInterrupt:
+    exit(Fore.CYAN+"\nGoodbye")
  
 
 
-
+   
 #pyshorteners.exceptions.ShorteningErrorException:
