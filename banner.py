@@ -55,7 +55,7 @@ def Urlban():
     for Line in ban.split("\n"):
         sleep(0.1)
         print(Line)
-#FACKE INFROMATION BANNER
+#FAKE INFROMATION BANNER
 def Fakeban():
    light ='\033[94m' 
    ban = (f"""{light}
