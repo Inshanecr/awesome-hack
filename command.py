@@ -17,6 +17,7 @@ except ImportError:
     system("pip install colorama")
     system("pip install ipapi")
     system("pip install pyshorteners")
+    exit("\nRun script again")
 
 
 
