@@ -2,6 +2,7 @@ from os import system
 system("apt install neofetch")
 system("clear")
 try:
+  from faker import Faker
   import pyshorteners
   import random 
   from ipapi import location
@@ -11,7 +12,7 @@ try:
   from time import sleep 
 except ImportError:
     system("pip install random")
-    system("pip install re")
+    system("pip install faker")
     system("pip install requests")
     system("pip install time")
     system("pip install colorama")
@@ -104,4 +105,34 @@ def short():
         
         except KeyboardInterrupt:
           exit(Fore.CYAN+"\nGoodbye")
-   
+ 
+def getInfo():
+  try:
+    country = input(Fore.YELLOW+"\nsend Your country name : ")
+    faker = Faker(country)
+    number = int(input(Fore.LIGHTBLUE_EX+"How much you need : "))
+    file = open("file-fake.txt","w")
+    for i in range(1,number+1):
+         fn= faker.name()
+         un = faker.user_name()
+         pwd = faker.password()
+         el = faker.email()
+         jn = faker.job()
+         adrs = faker.address()
+         file.write(f"""
+    fullname = {fn}
+    username = {un}
+    password = {pwd}
+    email = {el}
+    job = {jn}
+    address = {adrs}
+         """)
+        
+    file.close()
+    print(Fore.GREEN+"\nplease check file-fake.txt  "+Fore.RESET)
+  
+  except AttributeError:
+      exit(Fore.CYAN+"\nplease write country short name"+Fore.RED+"\nexample => German: de "+Fore.RESET)
+  except KeyboardInterrupt:
+    exit(Fore.CYAN+"\nGoodbye")
+
