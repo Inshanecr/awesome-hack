@@ -105,7 +105,7 @@ def short():
  
 def getInfo():
   try:
-    country = input(Fore.YELLOW+"send Your country name :[example: fa-ir] ")
+    country = input(Fore.YELLOW+"send Your country name[example: fa-ir] : ")
     faker = Faker(country)
     number = int(input(Fore.LIGHTBLUE_EX+"How much you need : "))
     file = open("file-fake.txt","w")
