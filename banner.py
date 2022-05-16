@@ -3,18 +3,21 @@ from colorama import Fore
 y = Fore.GREEN
 ye = Fore.YELLOW
 re = Fore.RESET
+r = Fore.RED
+lb = Fore.LIGHTBLUE_EX 
 def banner():#banner
-  ban =(f"""
+  ban =(f"""{lb}
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
 {ye}[3] >>{y} Get Fake information
 
 {ye}[2] >>{y} Show hacked camera
                             
-{ye}[1] >>{y} URL shorter
+{ye}[1] >>{y} URL shorter{r} [USE VPN !!!]
                               
-{ye}[0] >>{y} exit {re}
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+{ye}[0] >>{y} exit 
+{lb}
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤{re}
 """)
   for Line in ban.split("\n"):
     sleep(0.1)
