@@ -1,7 +1,7 @@
 from os import system 
 system("apt install neofetch")
 system("clear")
-
+#Libaries
 try:
   from faker import Faker
   import pyshorteners
@@ -14,7 +14,7 @@ try:
 
 except ImportError:
     exit("please install Libary\ncommand => python -m pip install -r requirements.txt")
-#CAMERA SCANNER    
+#CAMERA IP FINDER    
 def camScan():
  try:
     print()
@@ -90,7 +90,7 @@ def short():
             exit(Fore.RED+"\n[-] please turn on VPN\n")
         except KeyboardInterrupt:
           exit(Fore.CYAN+"\nGoodbye")
- 
+#GET FAKE USER INFORMATION 
 def getInfo():
   try:
     country = input(Fore.YELLOW+"send Your country name[example: fa-ir] : ")
@@ -123,7 +123,7 @@ def getInfo():
 
 
 
-
+#CHECK IP FOR FAKE INFORMATION 
 #def check_ip()
   #    ip = get("https://api.ipify.org").text
     # print('\n' + Fore.MAGENTA + ip + Fore.RESET)
