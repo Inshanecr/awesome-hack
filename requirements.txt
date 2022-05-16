@@ -1,0 +1,5 @@
+faker
+pyshorteners
+ipapi
+colorama
+requests
