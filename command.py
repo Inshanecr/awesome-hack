@@ -1,5 +1,6 @@
 try:
   import pyshorteners
+  import random 
   from ipapi import location
   from colorama import Fore,init
   from requests import get
@@ -17,17 +18,20 @@ def camScan():
  try:
     init()
     print()
-    print("""
-              [1] USA   [6] German
-              [2] JAPAN   [7] Thailand 
-              [3] Italy   [8] russia
-              [4] Korea     [9] IRAN
-                   [5] France  
+    colors =['\033[31m','\033[32m','\033[33m','\033[34m','\033[35m','\033[36m','\033[37m','\033[93m']
+    Q = random.choice(colors)
+    
+    print(f"""{Q}
+             [1] USA     [6] German
+             [2] JAPAN   [7] Thailand 
+             [3] Italy   [8] russia
+             [4] Korea   [9] IRAN
+                  [5] France  
               """)
     countries = ["US", "JP", "IT", "KR", "FR", "DE", "TW", "RU", "IR"]
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686; rv:68.0) Gecko/20100101 Firefox/68.0"}
 
-    num = int(input("OPTIONS : "))
+    num = int(input('\033[36m'+"OPTIONS : "))
     if num not in range(1, 145+1):
         raise IndexError
 
@@ -36,19 +40,22 @@ def camScan():
         f"http://www.insecam.org/en/bycountry/{country}", headers=headers
     )
     last_page = re.findall(r'pagenavigator\("\?page=", (\d+)', res.text)[0]
-
+    count = 0
     for page in range(int(last_page)):
         res = get(
             f"http://www.insecam.org/en/bycountry/{country}/?page={page}",
             headers=headers
         )
         find_ip = re.findall(r"http://\d+.\d+.\d+.\d+:\d+", res.text)
+        count+=1
+        print("\033[1;37m"+str(count))
         for ip in find_ip:
             print("\033[1;31m", ip)
- except:
-   pass
+ except KeyboardInterrupt:
+   exit('\033[37m'+"\nGoodBye\n")
  finally:
-    print("\033[1;37m")
+    print("\033[1;37m"+"\nplease copy all ip\n")
+    sleep(5)
 
 
 #URL SHORTETR
@@ -84,17 +91,3 @@ def short():
              print("shortUrl :"+link.osdb.short(url))
           elif opt == 6:
              print("shortUrl :"+link.tinyurl.short(url))
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
