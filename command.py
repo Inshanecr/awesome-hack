@@ -11,7 +11,7 @@ try:
   import re
   from time import sleep
 except ImportError:
-    exit("please install Libary\ncommand => python -m pip install requirements.txt")
+    exit("please install Libary\ncommand => python -m pip install -r requirements.txt")
 #CAMERA SCANNER    
 def camScan():
  try:
