@@ -11,6 +11,7 @@ try:
   import re
   from time import sleep
 except ImportError:
+    system("apt install python") 
     system("pip install faker")
     system("pip install requests")
     system("pip install colorama")
