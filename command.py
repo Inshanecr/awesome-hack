@@ -1,6 +1,7 @@
 from os import system 
+from banner import *
 system("apt install neofetch")
-system("clear")
+clear()
 #Libaries
 try:
   from faker import Faker
