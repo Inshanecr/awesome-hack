@@ -1,5 +1,7 @@
 from time import sleep 
 from colorama import Fore
+import platform
+from os import system 
 y = Fore.GREEN
 ye = Fore.YELLOW
 re = Fore.RESET
@@ -85,3 +87,11 @@ def CameraBan():
   for Line in ban.split("\n"):
     sleep(0.1)
     print(Line)
+
+ 
+def clear():
+   result = platform.uname()[0]
+   if result == "Windows":
+      system("cls")
+   elif result == "Linux":
+      system("clear")
