@@ -105,12 +105,13 @@ def getInfo():
          jn = faker.job()
          adrs = faker.address()
          file.write(f"""
-    fullname = {fn}
-    username = {un}
-    password = {pwd}
-    email = {el}
-    job = {jn}
-    address = {adrs}
+🗿 ＦＵＬＬ ＮＡＭＥ  = {fn}
+⚙️ ＵＳＥＲ ＮＡＭＥ  = {un}
+💳 ＰＡＳＳＷＯＲＤ = {pwd}
+🛰 ＥＭＡＩＬ  = {el}
+🏦 ＪＯＢ = {jn}
+🏘 ＡＤＤＲＥＳＳ = {adrs}
+---------------------------------
          """)
         
     file.close()
@@ -126,8 +127,11 @@ def getInfo():
 #CHECK IP FOR FAKE INFORMATION 
 #def check_ip()
   #    ip = get("https://api.ipify.org").text
-    # print('\n' + Fore.MAGENTA + ip + Fore.RESET)
+    #  print('\n' + Fore.MAGENTA + ip + Fore.RESET)
     #  http = get("https://api.ipify.org").text
    #   cou = location(http)["country"]
      # if cou == "IR":
          # exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
+   #   else:
+          #pass
+
