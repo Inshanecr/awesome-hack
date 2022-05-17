@@ -8,14 +8,13 @@ try:
 except ImportError:
     exit("please Install Libaries\ncommand => python -m pip install -r requirements.txt")
 
-system("clear")
 system("neofetch")
 
 while True:
  try: 
    banner()
    user =input(Fore.CYAN+"which Tool You need : ")
-   system("clear")
+   clear()
    if user == "1":
           Urlban()
           short()
