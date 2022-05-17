@@ -92,30 +92,32 @@ def short():
           exit(Fore.CYAN+"\nGoodbye")
 #GET FAKE USER INFORMATION 
 def getInfo():
+
   try:
     country = input(Fore.YELLOW+"send Your country name[example: fa-ir] : ")
-    faker = Faker(country)
     number = int(input(Fore.LIGHTBLUE_EX+"How much you need : "))
-    file = open("file-fake.txt","w")
-    for i in range(1,number+1):
-         fn= faker.name()
-         un = faker.user_name()
-         pwd = faker.password()
-         el = faker.email()
-         jn = faker.job()
-         adrs = faker.address()
-         file.write(f"""
+    count = 0
+    faker = Faker(country)#Get Faker information 
+    un = faker.user_name()
+    fn= faker.name()
+    pwd = faker.password()
+    el = faker.email()
+    jn = faker.job()
+    adrs = faker.address()
+    with open("file-fake.txt","w") as file:
+        for i in range(1,number+1):
+             count += 1
+             file.write(f"""
+[{count}]  -------------------------------
 🗿 ＦＵＬＬ ＮＡＭＥ  = {fn}
 ⚙️ ＵＳＥＲ ＮＡＭＥ  = {un}
 💳 ＰＡＳＳＷＯＲＤ = {pwd}
 🛰 ＥＭＡＩＬ  = {el}
 🏦 ＪＯＢ = {jn}
 🏘 ＡＤＤＲＥＳＳ = {adrs}
----------------------------------
-         """)
-        
-    file.close()
-    print(Fore.GREEN+"\nplease check file-fake.txt  "+Fore.RESET)
+             """)
+        file.close()
+        print(Fore.GREEN+"\nplease check file-fake.txt  "+Fore.RESET)
   
   except AttributeError:
       exit(Fore.CYAN+"\nplease write country short name"+Fore.RED+"\nexample => German: de "+Fore.RESET)
@@ -127,11 +129,8 @@ def getInfo():
 #CHECK IP FOR FAKE INFORMATION 
 #def check_ip()
   #    ip = get("https://api.ipify.org").text
-    #  print('\n' + Fore.MAGENTA + ip + Fore.RESET)
+    # print('\n' + Fore.MAGENTA + ip + Fore.RESET)
     #  http = get("https://api.ipify.org").text
    #   cou = location(http)["country"]
      # if cou == "IR":
          # exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
-   #   else:
-          #pass
-
