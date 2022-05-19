@@ -12,9 +12,9 @@ try:
   from requests import get
   import re
   from time import sleep
-
 except ImportError:
     exit("please install Libary\ncommand => python -m pip install -r requirements.txt")
+
 #CAMERA IP FINDER    
 def camScan():
  try:
@@ -91,6 +91,7 @@ def short():
             exit(Fore.RED+"\n[-] please turn on VPN\n")
         except KeyboardInterrupt:
           exit(Fore.CYAN+"\nGoodbye")
+
 #GET FAKE USER INFORMATION 
 def getInfo():
 
