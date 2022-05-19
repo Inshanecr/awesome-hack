@@ -88,7 +88,7 @@ def CameraBan():
     sleep(0.1)
     print(Line)
 
- 
+#main clear 
 def clear():
    result = platform.uname()[0]
    if result == "Windows":
