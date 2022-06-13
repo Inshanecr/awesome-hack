@@ -128,11 +128,3 @@ def getInfo():
 
 
 
-#CHECK IP FOR FAKE INFORMATION 
-#def check_ip()
-  #    ip = get("https://api.ipify.org").text
-    # print('\n' + Fore.MAGENTA + ip + Fore.RESET)
-    #  http = get("https://api.ipify.org").text
-   #   cou = location(http)["country"]
-     # if cou == "IR":
-         # exit(Fore.LIGHTBLACK_EX + "Your IP has " + Fore.LIGHTRED_EX + "BLOCKED from server" + Fore.LIGHTBLUE_EX + "[ Turn on VPN ] " + Fore.RESET + '|' + Fore.RED + " Your country "+ Fore.WHITE +" ↬ " +Fore.GREEN + cou +"\n\n\n\n"+Fore.RESET)
