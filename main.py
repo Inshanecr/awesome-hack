@@ -3,8 +3,7 @@ from os import system
 import subprocess
 from time import sleep
 try:
-  from colorama import Fore,init 
- 
+  from colorama import Fore,init  
   from command import *
   from banner import *
 except ImportError:
