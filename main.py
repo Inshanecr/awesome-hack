@@ -1,13 +1,19 @@
 # ----- T.me/LooQaat || T.me/Pythonte ----
 from os import system
+import subprocess
+from time import sleep
 try:
   from colorama import Fore,init 
-  from time import sleep 
+ 
   from command import *
   from banner import *
 except ImportError:
     exit("please Install Libaries\ncommand => python -m pip install -r requirements.txt")
 
+#check neofetch
+neofetch = subprocess.getoutput("neofetch")
+if "not found" in neofetch:
+  system("apt install neofetch")
 system("neofetch")
 
 while True:
@@ -31,5 +37,3 @@ while True:
  
 
 
-  
-#pyshorteners.exceptions.ShorteningErrorException:
