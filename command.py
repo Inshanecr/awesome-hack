@@ -1,24 +1,21 @@
 from os import system 
 from banner import *
-system("apt install neofetch")
+import subprocess
+import re
+from time import sleep
+import random 
 clear()
 #Libaries
-try:
-  from faker import Faker
-  import pyshorteners
-  import random 
-  from ipapi import location
-  from colorama import Fore,init
-  from requests import get
-  import re
-  from time import sleep
-except ImportError:
-    exit("please install Libary\ncommand => python -m pip install -r requirements.txt")
+from faker import Faker
+import pyshorteners  
+from ipapi import location
+from colorama import Fore,init
+from requests import get
+
 
 #CAMERA IP FINDER    
 def camScan():
  try:
-    print()
     colors =['\033[31m','\033[32m','\033[33m','\033[34m','\033[35m','\033[36m','\033[37m','\033[93m']
     Q = random.choice(colors)
     
@@ -33,7 +30,7 @@ def camScan():
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux i686; rv:68.0) Gecko/20100101 Firefox/68.0"}
 
     num = int(input('\033[36m'+"OPTIONS : "))
-    if num not in range(1, 145+1):
+    if num not in range(1,10):
         raise IndexError
 
     country = countries[num-1]
@@ -125,6 +122,3 @@ def getInfo():
       exit(Fore.CYAN+"\nplease write country short name"+Fore.RED+"\nexample => German: de "+Fore.RESET)
   except KeyboardInterrupt:
     exit(Fore.CYAN+"\nGoodbye")
-
-
-
