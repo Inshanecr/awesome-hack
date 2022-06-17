@@ -1,9 +1,6 @@
-from os import system 
 from banner import *
-import subprocess
-import re
+import re,random
 from time import sleep
-import random 
 clear()
 #Libaries
 from faker import Faker
@@ -83,7 +80,7 @@ def short():
                print(cy+"\nshortUrl :"+link.osdb.short(url))
             elif opt == 6:
                print(cy+"\nshortUrl :"+link.tinyurl.short(url))
-        
+            input(Fore.YELLOW+"\n[ * ] Press Enter To back Main Menu")
         except Exception as e:
             exit(Fore.RED+"\n[-] please turn on VPN\n")
         except KeyboardInterrupt:
@@ -91,7 +88,6 @@ def short():
 
 #GET FAKE USER INFORMATION 
 def getInfo():
-
   try:
     country = input(Fore.YELLOW+"send Your country name[example: fa-ir] : ")
     number = int(input(Fore.LIGHTBLUE_EX+"How much you need : "))
@@ -115,9 +111,8 @@ def getInfo():
 🏦 ＪＯＢ = {jn}
 🏘 ＡＤＤＲＥＳＳ = {adrs}
              """)
-        file.close()
         print(Fore.GREEN+"\nplease check file-fake.txt  "+Fore.RESET)
-  
+        sleep(5)
   except AttributeError:
       exit(Fore.CYAN+"\nplease write country short name"+Fore.RED+"\nexample => German: de "+Fore.RESET)
   except KeyboardInterrupt:
