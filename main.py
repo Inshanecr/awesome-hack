@@ -1,4 +1,4 @@
-# ----- T.me/LooQaat || T.me/Pythonte ----
+# ----- T.me/LooQaat || T.me/Pythonte -----
 from os import system
 import subprocess
 from time import sleep
