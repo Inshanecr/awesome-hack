@@ -13,20 +13,25 @@ except ImportError:
 neofetch = subprocess.getoutput("neofetch")
 if "not found" in neofetch:
   system("apt install neofetch")
-system("neofetch")
+  exit("please Run Script again")
+
 
 while True:
  try: 
+   clear()
+   system("neofetch")
    banner()
    user =input(Fore.CYAN+"which Tool You need : ")
-   clear()
    if user == "1":
+          clear()
           Urlban()
           short()
    elif user == "2":
+          clear()
           CameraBan()
           camScan()
    elif user == "3":
+          clear()
           Fakeban()
           getInfo()
    elif user == "0":
@@ -34,5 +39,3 @@ while True:
  except KeyboardInterrupt:
     exit(Fore.CYAN+"\nGoodbye")
  
-
-
