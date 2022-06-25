@@ -89,9 +89,6 @@ def CameraBan():
     print(Line)
 
 #main clear 
-def clear():
-   result = platform.uname()[0]
-   if result == "Windows":
-      system("cls")
-   elif result == "Linux":
+def clear():  
+   if platform.uname()[0] == "Linux":
       system("clear")
